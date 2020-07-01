@@ -1,22 +1,21 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
+import Container from '../components/Container'
 
 
-class App extends Component {
 
-  componentDidMount() {
-    navigator.geolocation.getCurrentPosition(function(position) {
-      console.log("Latitude is :", position.coords.latitude);
-      console.log("Longitude is :", position.coords.longitude);
-    });
-  }
+function App() {
 
-  render() {
+  const [location, setLocation] = useState();
+
     return (
       <div>
-          <p>Hey!</p>
+          <Container />
       </div>
     );
-  }
+  
 }
 
 export default App;
+
+
+
