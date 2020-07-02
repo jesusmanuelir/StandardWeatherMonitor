@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import Container from '../components/Container'
 
-
-
 function App() {
 
   const api = {
@@ -20,13 +18,13 @@ function App() {
       .then(r => {
         setWeather(r);
         setSearch('');
-        console.log(r);
         });
     }
   }
 
+
     return (
-      <div>
+      <main className={(typeof weather.main != "undefined") ? ((weather.main.temp > 22) ? '' : 'cold') : ''}>
           <div className="search-box">
               <input
                 type        = "text"
@@ -44,14 +42,14 @@ function App() {
                     country = {weather.sys.country}
                     temp    = {weather.main.temp}
                     weather = {weather.weather[0].main}
+                    icon    = {weather.weather[0].icon}
           />
             ): ('')}
-      </div>
+      </main>
     );
   
 }
 
 export default App;
-
 
 
