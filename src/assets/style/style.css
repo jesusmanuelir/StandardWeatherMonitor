@@ -9,6 +9,7 @@ body{
 }
 #app{
     background-color: #dee5ec;
+    min-height: 100vh;
     
 }
 
