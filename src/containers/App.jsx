@@ -4,7 +4,7 @@ import Container from '../components/Container'
 function App() {
 
   const api = {
-    key: "85dd741130ecdb508ac9d51a039099f2",
+    key: "",
     base: "https://api.openweathermap.org/data/2.5/"
   }
 
